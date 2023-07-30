@@ -33,14 +33,17 @@ export const Container = styled.div`
         top: 15vh;
         padding: 1rem 3rem;
         transition: 0.3s ease-in-out;
-        background-color: ${({ headerBackground }) =>
-            headerBackground ? "#000000dc" : "none"};
+        background-color: ${({ headerBg }) =>
+            headerBg ? "#000000dc" : "none"};
         }
         .tracks {
         margin: 0 2rem;
         display: flex;
         flex-direction: column;
         margin-bottom: 5rem;
+        &:hover{
+            cursor: pointer
+        }
         .row {
             padding: 0.5rem 1rem;
             display: grid;
@@ -49,17 +52,17 @@ export const Container = styled.div`
             background-color: rgba(0, 0, 0, 0.7);
             }
             .col {
-            display: flex;
-            align-items: center;
-            color: #dddcdc;
-            img {
+                display: flex;
+                align-items: center;
+                color: #dddcdc;
+            .img {
                 height: 40px;
                 width: 40px;
             }
             }
             .detail {
-            display: flex;
-            gap: 1rem;
+                display: flex;
+                gap: 1rem;
             .info {
                 display: flex;
                 flex-direction: column;
